@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadata del documento y enlaces a hojas de estilo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dragon Ball Recipes{% endblock %}</title> <!-- Título de la página con un bloque para ser extendido en plantillas específicas -->
+    
+    <!-- Enlace a la hoja de estilo de Bootstrap para diseño responsivo -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Enlace a una hoja de estilo personalizada -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+    
+    <!-- Favicon de la página (ícono en la pestaña del navegador) -->
+    <link rel="icon" href="../static/images/icons8-vegeta-240.png">
+</head>
+<body>
+    <!-- Barra de navegación principal -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Marca/logotipo que redirige a la página principal -->
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="../static/images/icons8-vegeta-240.png" alt="Dragon Ball Recipes" style="max-height: 40px;">
+        </a>
+        
+        <!-- Sección de enlaces de navegación -->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <!-- Verifica si el usuario está autenticado y muestra opciones de navegación específicas -->
+                {% if 'user_id' in session %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('recipes') }}">Ver Recetas</a> <!-- Enlace para ver recetas -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('add_recipe') }}">Añadir Recetas</a> <!-- Enlace para añadir recetas -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('temporizador') }}">Temporizador</a> <!-- Enlace al temporizador -->
+                    </li>
+                {% endif %}
+            </ul>
+            
+            <!-- Sección de navegación en la parte derecha, dependiendo del estado de autenticación -->
+            <ul class="navbar-nav ml-auto">
+                {% if 'user_id' in session %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Cerrar Sesión</a> <!-- Enlace para cerrar sesión -->
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Iniciar Sesión</a> <!-- Enlace para iniciar sesión -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('register') }}">Registrarse</a> <!-- Enlace para registrarse -->
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Contenedor principal para el contenido de la página -->
+    <div class="container mt-4">
+        {% block content %}
+        <!-- Bloque de contenido dinámico que se completará en plantillas específicas -->
+        {% endblock %}
+    </div>
+    
+    <!-- Pie de página -->
+    <footer class="mt-5 bg-dark text-white text-center py-3">
+        <p>&copy; {{ current_year }} Dragon Ball Recipe. All rights reserved.</p> <!-- Copyright con el año actual -->
+        <p><a href="{{ url_for('about') }}" class="text-white">About Us</a> | <a href="{{ url_for('contact') }}" class="text-white">Contact</a></p> <!-- Enlaces a las páginas About y Contact -->
+    </footer>
+    
+    <!-- Enlaces a los scripts de JavaScript para interacción en el cliente -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JavaScript -->
+    <script src="../static/js/search.js"></script> <!-- Script personalizado para búsqueda -->
+    <script src="../static/js/script.js"></script> <!-- Script personalizado general -->
+    <script src="../static/js/timer.js"></script><!-- Script personalizado para la funcionalidad del temporizador -->
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}Temporizador de Cocina{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Título principal de la página -->
+    <h1 class="text-center">Temporizador de Cocina</h1>
+    
+    <div class="timer-container mt-4">
+        <!-- Contenedor para los campos de entrada del temporizador -->
+        <div class="input-group justify-content-center">
+            <!-- Campo para ingresar minutos -->
+            <input type="number" id="minutes" class="form-control" placeholder="Minutos" min="0">
+            <span class="input-group-text">:</span>
+            <!-- Campo para ingresar segundos -->
+            <input type="number" id="seconds" class="form-control" placeholder="Segundos" min="0">
+        </div>
+        
+        <!-- Contenedor para los botones de control del temporizador -->
+        <div class="buttons mt-3 text-center">
+            <!-- Botón para iniciar el temporizador -->
+            <button id="startButton" class="btn btn-primary mx-2">Iniciar</button>
+            <!-- Botón para pausar el temporizador -->
+            <button id="pauseButton" class="btn btn-warning mx-2">Pausar</button>
+            <!-- Botón para reiniciar el temporizador -->
+            <button id="resetButton" class="btn btn-danger mx-2">Reiniciar</button>
+        </div>
+        
+        <!-- Display del tiempo restante -->
+        <div id="timeDisplay" class="display-4 text-center mt-4">00:00</div>
+    </div>
+</div>
+
+
+{% endblock %}

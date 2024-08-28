@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}Detalles de la Receta{% endblock %}
+
+{% block content %}
+    <!-- Contenedor principal para el contenido de la página -->
+    <div class="container mt-5">
+        
+        <!-- Título de la receta -->
+        <h1>{{ recipe.name }}</h1>
+        
+        <!-- Descripción general de la receta -->
+        <p>{{ recipe.description }}</p>
+        
+        <!-- Encabezado para la sección de detalles de la receta -->
+        <h3>Detalles de la Receta</h3>
+        
+        <!-- Lista de detalles de la receta -->
+        <ul class="list-group">
+            {% for detail in details %}
+                <!-- Elemento de la lista para cada detalle de la receta -->
+                <li class="list-group-item">
+                    <strong>Paso {{ detail.step_number }}:</strong> {{ detail.step_description }}<br>
+                    <strong>Ingrediente:</strong> {{ detail.ingredient }}<br>
+                    <strong>Cantidad:</strong> {{ detail.quantity }}
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <!-- Botón para volver a la lista de recetas -->
+        <a href="{{ url_for('recipes') }}" class="btn btn-info mt-3">Volver a Recetas</a>
+    </div>
+{% endblock %}

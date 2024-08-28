@@ -1,0 +1,95 @@
+/* Estilo general para el cuerpo del documento */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Margen para el contenedor principal */
+.container {
+    margin-top: 30px;
+}
+
+/* Estilo para las tarjetas */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+/* Estilo para los botones con clases específicas */
+.btn-primary, .btn-info, .btn-secondary, .btn-danger {
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Estilo para los cuadros de detalles */
+.detail {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+/* Estilo para las etiquetas de los grupos de formulario */
+.form-group label {
+    font-weight: bold;
+}
+
+/* Alineación del texto dentro del cuerpo de la tarjeta */
+.card-body {
+    text-align: center;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Estilo específico para el contenedor del temporizador */
+.timer-container {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los campos de entrada dentro del grupo de entrada */
+.input-group input {
+    max-width: 100px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Estilo para el display del tiempo */
+#timeDisplay {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Estilo para los botones dentro del contenedor de botones */
+.buttons button {
+    min-width: 100px;
+    font-size: 1rem;
+}

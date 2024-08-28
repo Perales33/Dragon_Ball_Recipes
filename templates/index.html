@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">Bienvenido a Dragon Ball Recipes</h1>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sección de Imágenes de Platos -->
+            <div class="col-md-12">
+                <h2>Platos Destacados</h2>
+                <div class="row">
+                    <!-- Platos 1 -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="../static/images/muffins.jpeg" class="card-img-top" alt="Plato 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Muffins de Ki de Trunks</h5>
+                                <p class="card-text">Muffins que aumentan tu energía, ideales para entrenar como Trunks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Platos 2 -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="../static/images/pizza_saiyan.jpeg" class="card-img-top" alt="Plato 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza Saiyan</h5>
+                                <p class="card-text">Una pizza robusta llena de ingredientes energéticos que te dará la fuerza de un Saiyan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Platos 3 -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="../static/images/sopa_senzu.jpeg" class="card-img-top" alt="Plato 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Sopa de Senzu</h5>
+                                <p class="card-text">Una sopa revitalizante hecha con la mítica semilla Senzu, que restaura completamente la salud.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección de Recomendaciones del Chef -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Recomendaciones del Chef Vegeta</h2>
+                <div class="list-group">
+                    <a href="/recipe/4" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1">Tacos del Maestro Roshi</h5>
+                        <p class="mb-1">
+                            ¡Estos tacos son tan legendarios que el Maestro Roshi los prepara con una mano mientras entrena con la otra! 
+                            Cada bocado está cargado de energía para que puedas entrenar hasta alcanzar el nivel de un Super Saiyan... o al menos poder levantar el control remoto del sofá sin esfuerzo. 
+                            ¡Cuidado! Estos tacos tienen más sabor que el Kamehameha del Maestro, y pueden hacer que quieras luchar contra un ejército de Androides solo para probar un segundo. 
+                            ¡Haz que tu estómago sea tan poderoso como tu espíritu con estos tacos!
+                        </p>
+                        <small>¡No te lo pierdas!</small>
+                    </a>
+                    <a href="/recipe/10" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1">Batido de Energía de Goku</h5>
+                        <p class="mb-1">
+                            ¿Necesitas un boost de energía que te haga sentir como si acabases de entrenar con el propio Goku? 
+                            ¡Este batido es tu respuesta! Hecho con ingredientes tan poderosos que incluso el mismo Goku se detiene a tomar un sorbo antes de lanzarse a su próxima batalla. 
+                            Ideal para esos días en los que te sientes más débil que un Krillin en una pelea con un Saiyan. Un sorbo y sentirás que podrías superar la velocidad de la luz... 
+                            o al menos enfrentar a tu jefe con una sonrisa. ¡Prepárate para un nivel de energía tan alto que incluso Vegeta se pondría verde de envidia!
+                        </p>
+                        <small>¡Perfecto para una comida poderosa!</small>
+                    </a>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

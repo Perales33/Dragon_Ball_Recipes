@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Añadir Receta{% endblock %}
+
+{% block content %}
+    <!-- Título principal de la página -->
+    <h1 class="mt-5">Añadir Nueva Receta</h1>
+    
+    <!-- Formulario para añadir una nueva receta -->
+    <form action="{{ url_for('add_recipe') }}" method="post">
+        
+        <!-- Campo para el nombre de la receta -->
+        <div class="form-group">
+            <label for="name">Nombre de la receta</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        
+        <!-- Campo para la descripción de la receta -->
+        <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
+        </div>
+        
+        <!-- Contenedor para detalles adicionales de la receta -->
+        <div id="details-container">
+            <!-- Detalles se añadirán aquí mediante JavaScript -->
+        </div>
+        
+        <!-- Botón para añadir detalles adicionales a la receta -->
+        <button type="button" id="add-detail" class="btn btn-primary">Añadir Detalle</button>
+        
+        <!-- Botón para enviar el formulario y guardar la receta -->
+        <button type="submit" class="btn btn-success">Guardar Receta</button>
+    </form>
+{% endblock %}

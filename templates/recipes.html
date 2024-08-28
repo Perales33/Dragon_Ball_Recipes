@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}Recetas{% endblock %}
+
+{% block content %}
+    <!-- Título de la página de recetas -->
+    <h1 class="mt-5">Recetas de Cocina</h1>
+    
+    <!-- Campo de búsqueda para filtrar recetas -->
+    <div class="mt-3">
+        <input type="text" id="search" class="form-control" placeholder="Buscar recetas...">
+    </div>
+    
+    <!-- Lista para mostrar las recetas; se llenará dinámicamente con jQuery -->
+    <ul id="recipe-list" class="list-group mt-3">
+        <!-- Aquí se insertarán los elementos de recetas -->
+    </ul>
+{% endblock %}

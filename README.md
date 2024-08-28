@@ -3,10 +3,6 @@
 
 [Ver el Video de Demostración](https://youtu.be/q6WRHR1DMQ4)
 
-## Demo en Vivo
-
-[Visitar la Aplicación en Vivo](https://dragon-ball-recipes.onrender.com)
-
 ---
 
 ## Tabla de Contenidos
@@ -181,4 +177,4 @@ Este proyecto está licenciado bajo la [MIT License](LICENSE).
 
 ---
 
-Para más información y actualizaciones, visita el [repositorio en GitHub](https://github.com/Perales33/Proyectos/tree/Mio/Dragon_Ball_Recipes) y consulta el archivo `README.md`. ¡Gracias por tu interés en **Dragon Ball Recipes**!
+Para más información y actualizaciones, visita el [repositorio en GitHub](https://github.com/Perales33/Dragon_Ball_Recipes) y consulta el archivo `README.md`. ¡Gracias por tu interés en **Dragon Ball Recipes**!
